@@ -1,0 +1,34 @@
+{
+    "name": "DTDL",
+    "package": "dtdl",
+    "index": "azure.github.io/opendigitaltwins-dtdl/index.html",
+    "selectors": {
+        "h1": [
+            { "type": "Guide", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v1-preview/dtdlv1.html" },
+            { "type": "Guide", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v2/DTDL.v2.html" },
+            { "type": "Guide", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v3/DTDL.v3.html" },
+            { "type": "Guide", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v4/DTDL.v4.html" },
+            { "type": "Guide", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v3/DTDL.Extensions.html" },
+            { "type": "Guide", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v4/DTDL.Extensions.html" },
+
+            { "type": "Extension", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v3/DTDL.annotation.v1.html" },
+            { "type": "Extension", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v3/DTDL.historization.v1.html" },
+            { "type": "Extension", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v3/DTDL.mqtt.v1.html" },
+            { "type": "Extension", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v3/DTDL.overriding.v1.html" },
+            { "type": "Extension", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v3/DTDL.quantitativeTypes.v1.html" },
+
+            { "type": "Extension", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v4/DTDL.annotation.v2.html" },
+            { "type": "Extension", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v4/DTDL.historization.v2.html" },
+            { "type": "Extension", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v4/DTDL.mqtt.v2.html" },
+            { "type": "Extension", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v4/DTDL.mqtt.v3.html" },
+            { "type": "Extension", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v4/DTDL.onvif.v1.html" },
+            { "type": "Extension", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v4/DTDL.overriding.v2.html" },
+            { "type": "Extension", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v4/DTDL.quantitativeTypes.v2.html" },
+            { "type": "Extension", "matchpath": "azure.github.io/opendigitaltwins-dtdl/DTDL/v4/DTDL.requirement.v1.html" }
+        ]
+    },
+    "ignore": ["opendigitaltwins-dtdl"],
+    "icon32x32": "icon.png",
+    "allowJS": false,
+    "ExternalURL": "https://azure.github.io/opendigitaltwins-dtdl"
+}
