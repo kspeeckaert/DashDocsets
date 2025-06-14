@@ -40,9 +40,7 @@ jobs:
           mkdir bin
           export CGO_CFLAGS="-g -O2 -Wno-return-local-addr"
           export GOBIN=$(pwd)/bin
-          echo $GOBIN
           go install github.com/technosophos/dashing@latest
-          ls -al bin
 
       - name: Setup Python environment
         uses: actions/setup-python@v5
