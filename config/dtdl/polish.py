@@ -3,11 +3,10 @@ import logging
 from pathlib import Path
 from bs4 import BeautifulSoup
 
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)
-
 
 if __name__ == '__main__':
+
+    logging.basicConfig(level=logging.INFO)
 
     buildfolder = Path('./')
 
