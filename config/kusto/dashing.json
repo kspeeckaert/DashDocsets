@@ -1,0 +1,41 @@
+{
+    "name": "Kusto Query Language",
+    "package": "kusto",
+    "index": "learn.microsoft.com/en-us/kusto/index.html@view=azure-data-explorer.html",
+    "selectors": {
+        "#main h1": [
+            {
+                "type": "Type",
+                "matchpath": "learn.microsoft.com/en-us/kusto/query/scalar-data-types/.*\\.html"
+            },
+            {
+                "type": "Function",
+                "matchpath": "learn.microsoft.com/en-us/kusto/query/functions/.*\\.html"
+            },
+            {
+                "type": "Function",
+                "matchpath": "learn.microsoft.com/en-us/kusto/query/[^\\\\]*\\.html"
+            },
+            {
+                "type": "Command",
+                "matchpath": "learn.microsoft.com/en-us/kusto/management/.*\\.html"
+            },
+            {
+                "type": "Element",
+                "matchpath": "learn.microsoft.com/en-us/kusto/query/schema-entities/.*\\.html"
+            },
+            {
+                "type": "Guide",
+                "matchpath": "learn.microsoft.com/en-us/kusto/(query|management)/index.html"
+            },
+            {
+                "type": "Guide",
+                "matchpath": "learn.microsoft.com/en-us/kusto/query/tutorials.*\\.html"
+            }
+        ],
+        "#main h2": "Section"
+    },
+    "icon32x32": "icon.png",
+    "allowJS": true,
+    "ExternalURL": "https://learn.microsoft.com/en-us/kusto/?view=azure-data-explorer"
+}
