@@ -13,3 +13,10 @@ For each docset you want to create, you'll need the following:
 - A `dashing.json` file that contains the instructions for [dashing](https://github.com/technosophos/dashing) to build your docset.
 
 The resulting docset will be zipped and added to the workflow's artifacts.
+
+## Building
+
+The repo contains 2 workflows:
+
+- Build Docset (`build-docset.yml`) – Performs the heavy lifting and generates the docset.
+- Build Orchestrator (`build-orchestrator.yml`) – The orchestrator that calls the `build-docset.yml` workflow (by passing the docset name).
