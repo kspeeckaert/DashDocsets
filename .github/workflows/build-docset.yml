@@ -2,6 +2,12 @@ name: Build Docset
 
 # Controls when the workflow will run
 on:
+  workflow_call:
+    inputs:
+      docset:
+        required: true
+        type: string
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
