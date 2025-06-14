@@ -1,0 +1,12 @@
+name: Build Orchestrator
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build-dtdl:
+    uses: ./.github/workflows/build-docset.yml
+    with:
+      docset: dtdl
