@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 if __name__ == '__main__':
 
-    logging.basicConfig(level=logging.INFO)
+    logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
     buildfolder = Path('./')
 
