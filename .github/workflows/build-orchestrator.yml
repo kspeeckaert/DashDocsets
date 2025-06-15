@@ -2,15 +2,41 @@ name: Build Orchestrator
 
 on:
   workflow_call:
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+  
 jobs:
-  build-dtdl:
+  build:
+    strategy:
+      matrix:
+        docset: [dtdl, kusto]  # Add more docsets here
     uses: ./.github/workflows/build-docset.yml
     with:
-      docset: dtdl
-  build-kusto:
-    uses: ./.github/workflows/build-docset.yml
-    with:
-      docset: kusto
+      docset: ${{ matrix.docset }}
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+    
+    - name: Download All Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: ./artifacts
+        merge-multiple: true
+        
+    - name: Set tag and release name
+      id: set_vars
+      run: |
+        echo "tag=docsets-$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
+        echo "release_name=Docset $(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+    - name: Create GitHub Release (no source code assets)
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh release create "$tag" ./artifacts/* \
+          --title "$release_name" \
+          --notes "Automated release of build artifacts only." \
+          --repo "$GITHUB_REPOSITORY" \
+          --latest
