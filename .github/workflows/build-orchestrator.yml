@@ -7,7 +7,7 @@ jobs:
   build:
     strategy:
       matrix:
-        docset: [dtdl, kusto]  # Add more docsets here
+        docset: [dtdl, kusto, azcli]  # Add more docsets here
     uses: ./.github/workflows/build-docset.yml
     with:
       docset: ${{ matrix.docset }}
