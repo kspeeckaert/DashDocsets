@@ -1,0 +1,22 @@
+{
+    "name": "Azure CLI",
+    "package": "azcli",
+    "index": "learn.microsoft.com/en-us/cli/azure/reference-index@view=azure-cli-latest.html",
+    "selectors": {
+        "#main h1": [
+            {
+                "type": "Module",
+                "matchpath": "learn.microsoft.com/en-us/cli/azure/[^\\\\]*\\.html"
+            },
+            {
+                "type": "Guide",
+                "matchpath": "learn.microsoft.com/en-us/cli/azure/reference-index@view=azure-cli-latest.html"
+            }
+        ],
+        "#main h2[id^='az']": "Command",
+        "#main h2[id='commands']": "Section"
+    },
+    "icon32x32": "icon.png",
+    "allowJS": true,
+    "ExternalURL": "https://learn.microsoft.com/en-us/cli/azure/"
+}
