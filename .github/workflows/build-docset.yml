@@ -72,7 +72,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ inputs.docset }}.docset .zip
+          name: ${{ inputs.docset }}.docset.zip
           path: ./build/${{ inputs.docset }}.docset.zip
           overwrite: true
           compression-level: 0
