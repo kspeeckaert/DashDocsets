@@ -64,13 +64,16 @@ jobs:
           rm -rf ./config
           echo "Creating docset..."
           ../bin/dashing build
+          echo "Compresing docset..."
+          zip -r "$(basename $DOCSET.docset).zip" $DOCSET.docset
         env:
           DOCSET: ${{ inputs.docset }}
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ inputs.docset }}.docset 
-          path: ./build/${{ inputs.docset }}.docset
+          name: ${{ inputs.docset }}.docset .zip
+          path: ./build/${{ inputs.docset }}.docset.zip
           overwrite: true
+          compression-level: 0
           if-no-files-found: error
