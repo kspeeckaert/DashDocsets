@@ -10,3 +10,7 @@ jobs:
     uses: ./.github/workflows/build-docset.yml
     with:
       docset: dtdl
+  build-kusto:
+    uses: ./.github/workflows/build-docset.yml
+    with:
+      docset: kusto
