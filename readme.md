@@ -6,13 +6,16 @@
 
 For each docset you want to create, you'll need the following:
 
-- A subfolder within `config` to host the docset related files.
-- A `download.sh` file that contains a Bash script (esentially calling `wget` to mirror the site).
-- A `polish.py` Python file and corresponding `requirements.txt` file to clean up the mirrored files.
-- A `icon.png` that will serve as the icon of your docset
-- A `dashing.json` file that contains the instructions for [dashing](https://github.com/technosophos/dashing) to build your docset.
+- `config` subfolder – hosts the docset related files.
+- `download.sh` – Bash script to mirror the site (esentially calling `wget` ).
+- `polish.py` – Python script and corresponding `requirements.txt` file to clean up the mirrored files.
+- `icon.png` –  the icon of your docset (don't forget to reference this in `dashing.json`).
+- `dashing.json` – contains the instructions for [dashing](https://github.com/technosophos/dashing) to build your docset.
 
-The resulting docset will be zipped and added to the workflow's artifacts.
+> [!IMPORTANT]
+> Make sure the `package` key in `dashing.json` is set to the same value as the name of the `config` subfolder.
+
+The resulting docset will  added to the workflow's artifacts.
 
 ## Building
 
@@ -20,3 +23,5 @@ The repo contains 2 workflows:
 
 - Build Docset (`build-docset.yml`) – Performs the heavy lifting and generates the docset.
 - Build Orchestrator (`build-orchestrator.yml`) – The orchestrator that calls the `build-docset.yml` workflow (by passing the docset name).
+
+The *Build Orchestrater* will gather all docsets created by the individual *Build Docset* jobs, and publish them as a new release.
